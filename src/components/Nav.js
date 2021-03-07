@@ -6,7 +6,6 @@ class Nav extends Component {
   state = {
     show: true,
     scrollPos: 0,
-    activeClass: "",
   };
 
   // Adds an event listener when the component is mount.
@@ -28,7 +27,6 @@ class Nav extends Component {
   };
 
   render() {
-    let { activeClass } = this.state;
     return (
       <nav
         className={
@@ -40,7 +38,7 @@ class Nav extends Component {
         <div className="container">
           <NavLink className="navbar-brand" to="/">
             GUAVA
-          </NavLink>{" "}
+          </NavLink>
           <button
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
