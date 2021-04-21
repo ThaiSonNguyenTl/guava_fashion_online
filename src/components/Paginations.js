@@ -13,7 +13,7 @@ class Paginations extends Component{
             <Pagination.First onClick={prevPage}  />
                 {
                     indexArray.map(index => (
-                    <Pagination.Item onClick ={() => paginationIndex(index)} className={pageIndex===index?'active':""}>{index}</Pagination.Item>
+                    <Pagination.Item onClick ={() => paginationIndex(index)} className={pageIndex===index?'active':"" } key={index}>{index}</Pagination.Item>
                     ))
             }
             <Pagination.Last onClick={nextPage} />

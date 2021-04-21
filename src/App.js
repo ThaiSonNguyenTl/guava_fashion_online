@@ -8,16 +8,14 @@ class App extends Component {
   
   render() {
     return (
-      <BrowserRouter>
-        {/* <div className="App"> */}
+      <React.Fragment>
+        <BrowserRouter>
         <Header/>
-          <div className="maincontainer">
             <Switch>
               {this.showContent(routes)}
           </Switch>
-        </div>
-      {/* </div> */}
       </BrowserRouter>
+      </React.Fragment>
     );
   }
 

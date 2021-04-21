@@ -7,7 +7,6 @@ class Products extends Component {
         <Row>
         {this.props.children}
         </Row>
-      
       </Col>
     );
   }

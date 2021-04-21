@@ -4,11 +4,26 @@ const productModel = require('./model')
 const handlers = {
     async findMany(req, res, next) {
         try {
-            let { gender = '' } = req.query
-            console.log(gender)
+            let {
+                gender = '',
+                search = '',
+                category=''
+            } = req.query
+            // console.log(gender)
+            // console.log(search)
+            // console.log(category)
             let condition = {}
             if (gender) {
                 condition.gender = gender
+            }
+            if (search) {
+                condition.name = new RegExp(search, 'i')
+            }
+            // } else if (condition.name != new RegExp(search, 'i')){
+            //     throw new Error('Not Product Found')
+            // }
+            if (category) {
+                condition.category=category
             }
             let items = await productModel.find(condition).exec()
             res.json(items)

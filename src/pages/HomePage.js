@@ -11,6 +11,7 @@ class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
+     
         <Slider />
         <Categories />
         <BestSeller />

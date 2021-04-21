@@ -7,6 +7,7 @@ import CartPage from './pages/CartPage'
 import SignIn from './components/SignIn'
 import NotFound from './pages/NotFoundPage'
 import NewArrivals from './pages/NewArrivals'
+import ProductDetailPage from './pages/ProductDetailPage'
 const routes = [
     {
         path: '/',
@@ -27,6 +28,11 @@ const routes = [
         path: '/kid',
         exact: false,
         main: ()=> <KidPage />
+    },
+    {
+        path: '/product_detail/:id',
+        exact: false,
+        main: ({ match }) => <ProductDetailPage match={match}/>
     },
     {
         path: '/cart',

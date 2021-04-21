@@ -16,6 +16,10 @@ const productSchema = new Schema({
         required: true,
         unique:true
     },
+    imgDetail: {
+        type: String,
+    },
+    
     category: {
         type: String,
         required: true,
